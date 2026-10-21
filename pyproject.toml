@@ -1,0 +1,25 @@
+[project]
+name = "ai-6fatty"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "charset-normalizer>=3.4.9",
+    "langchain-openai>=1.7.2",
+    "matplotlib>=3.11.2",
+    "openai-tts",
+    "pandas>=3.0.6",
+    "peas-agent-runtime",
+    "peas-agent-skills",
+    "peas-agent-tools",
+    "python-dotenv>=1.2.4",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.61",
+]
+
+[tool.uv.sources]
+peas-agent-tools = { git = "https://github.com/mz038197/peas-agent-tools.git" }
+peas-agent-skills = { git = "https://github.com/mz038197/peas-agent-skills.git" }
+openai-tts = { git = "https://github.com/mz038197/openai-tts.git" }
+peas-agent-runtime = { git = "https://github.com/mz038197/peas-agent-runtime.git" }
