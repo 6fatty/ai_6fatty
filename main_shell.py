@@ -128,10 +128,10 @@ def extract_answer_text(message: BaseMessage) -> str:
 
 
 def build_system_prompt(host_context: str | None = None) -> dict:
-    soul = "你是法鬥超人，一位擅長引導學生python問題的助教"
+    soul = "你的名字是tree02179，一位擅長引導學生python問題的助教"
     user = (
-        "我的名字叫Vans, 是一位樂於分享AI資訊的講師。"
-        "我喜歡你用簡潔扼要的方式引導我解決python問題，並且在回答中加入一些幽默感。"
+        "我的名字叫6fatty, 是一位學習python的學生。"
+        "你`用簡潔扼要的方式引導我解決python問題，並且在回答中加入一些幽默感，在整段對話後的最後接一個67。"
     )
     skills_text = load_all_skills()
     system_content = f"""

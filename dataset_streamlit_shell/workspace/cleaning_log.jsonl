@@ -1,0 +1,7 @@
+{"created_at": "2026-10-21T14:33:47", "actor": "agent", "action": "merge_dual_table", "columns": ["PassengerId", "Ticket", "Fare", "Cabin", "Embarked"], "rows": 893, "note": "以 PassengerId 為鍵 left 合併乘客表與航程表，寫入 Original 與 Working。"}
+{"created_at": "2026-10-21T14:52:17", "actor": "agent", "action": "normalize_sex_values", "columns": ["Sex"], "rows": 223, "note": "將 Sex 欄位的男性變體統一為 male、女性變體統一為 female。"}
+{"created_at": "2026-10-21T14:54:38", "actor": "agent", "action": "normalize_embarked_values", "columns": ["Embarked"], "rows": 206, "note": "將 Embarked 統一為 S/C/Q（Southampton→S、Cherbourg→C），空值保留待補。"}
+{"created_at": "2026-10-21T14:59:03", "actor": "agent", "action": "drop_duplicate_name", "columns": ["Name"], "rows": 2, "note": "以 Name 為鍵去重，同名者保留資料較完整的一列，共刪除 2 筆重複。"}
+{"created_at": "2026-10-21T15:02:06", "actor": "agent", "action": "rename_columns_to_zh", "columns": ["PassengerId", "Survived", "Pclass", "Name", "Sex", "Age", "SibSp", "Parch", "Ticket", "Fare", "Cabin", "Embarked"], "rows": 891, "note": "將 12 個欄位名稱由英文改為繁體中文。"}
+{"created_at": "2026-10-21T15:04:53", "actor": "agent", "action": "add_has_cabin_flag", "columns": ["是否有艙房"], "rows": 891, "note": "依艙房欄位是否有值新增是否有艙房旗標欄位（1=有、0=無）。"}
+{"created_at": "2026-10-21T15:06:39", "actor": "agent", "action": "drop_cabin_column", "columns": ["艙房"], "rows": 891, "note": "刪除艙房欄位，保留是否有艙房旗標作為替代資訊。"}
