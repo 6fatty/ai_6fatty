@@ -5,3 +5,11 @@
 {"created_at": "2026-10-21T15:02:06", "actor": "agent", "action": "rename_columns_to_zh", "columns": ["PassengerId", "Survived", "Pclass", "Name", "Sex", "Age", "SibSp", "Parch", "Ticket", "Fare", "Cabin", "Embarked"], "rows": 891, "note": "將 12 個欄位名稱由英文改為繁體中文。"}
 {"created_at": "2026-10-21T15:04:53", "actor": "agent", "action": "add_has_cabin_flag", "columns": ["是否有艙房"], "rows": 891, "note": "依艙房欄位是否有值新增是否有艙房旗標欄位（1=有、0=無）。"}
 {"created_at": "2026-10-21T15:06:39", "actor": "agent", "action": "drop_cabin_column", "columns": ["艙房"], "rows": 891, "note": "刪除艙房欄位，保留是否有艙房旗標作為替代資訊。"}
+{"created_at": "2026-10-28T13:13:25", "actor": "agent", "action": "fill_missing_age_by_parch_mean", "columns": ["年齡"], "rows": 20, "note": "以同行父母子女數大於 0 之乘客的年齡平均（23.01）補齊其年齡空值 20 筆。"}
+{"created_at": "2026-10-28T13:15:31", "actor": "agent", "action": "refill_missing_age_by_parch_median", "columns": ["年齡"], "rows": 20, "note": "先還原前次平均數補值的 20 筆年齡，改以同行父母子女數大於 0 之乘客年齡中位數（22.00）補齊 20 筆空值。"}
+{"created_at": "2026-10-28T13:17:17", "actor": "agent", "action": "fill_missing_embarked_mode", "columns": ["登船港口"], "rows": 6, "note": "以登船港口的眾數（S）補齊空值共 6 筆。"}
+{"created_at": "2026-10-28T13:18:47", "actor": "agent", "action": "fill_missing_age_by_pclass_median", "columns": ["年齡", "艙等"], "rows": 157, "note": "以各艙等年齡中位數（1等 37、2等 29、3等 24）補齊年齡空值共 157 筆。"}
+{"created_at": "2026-10-28T13:20:56", "actor": "agent", "action": "fill_missing_fare_mode_ticket_unknown", "columns": ["票號", "票價"], "rows": 4, "note": "票價以並列眾數取最小值 8.05 補齊 4 筆；票號為識別碼，空值 4 筆以 UNKNOWN 標記，不使用眾數避免製造重複身份。"}
+{"created_at": "2026-10-28T13:29:51", "actor": "agent", "action": "one_hot_encode_gender", "columns": ["性別_female", "性別_male"], "rows": 891, "note": "以 one-hot 將性別欄位轉為性別_female與性別_male兩個0/1整數欄，並移除原始性別欄。"}
+{"created_at": "2026-10-28T13:32:15", "actor": "agent", "action": "label_encode_gender", "columns": ["性別"], "rows": 891, "note": "將性別合併為單一整數欄並移除性別_female、性別_male兩欄，female記為1、male記為0。"}
+{"created_at": "2026-10-28T13:33:35", "actor": "agent", "action": "one_hot_encode_embarked_and_pclass", "columns": ["登船港口_C", "登船港口_Q", "登船港口_S", "艙等_1", "艙等_2", "艙等_3"], "rows": 891, "note": "以 one-hot 將登船港口拆為S/C/Q三欄、艙等拆為1/2/3三欄，皆為0/1整數並移除原始兩欄。"}

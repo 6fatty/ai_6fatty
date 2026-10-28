@@ -1,0 +1,11 @@
+(891, 12)
+['乘客編號', '是否生還', '艙等', '姓名', '性別', '年齡', '同行兄弟姊妹配偶數', '同行父母子女數', '票號', '票價', '登船港口', '是否有艙房']
+int64
+性別
+0    577
+1    314
+   乘客編號  是否生還  艙等                                                   姓名  性別    年齡  同行兄弟姊妹配偶數  同行父母子女數       票號    票價 登船港口  是否有艙房
+0     2     1   1  Cumings, Mrs. John Bradley (Florence Briggs Thayer)   1  38.0          1        0  UNKNOWN  8.05    S      0
+1     3     1   3                               Heikkinen, Miss. Laina   1  26.0          0        0  UNKNOWN  8.05    S      0
+2     4     1   1         Futrelle, Mrs. Jacques Heath (Lily May Peel)   1  35.0          1        0  UNKNOWN  8.05    S      0
+NaN in 性別: 0

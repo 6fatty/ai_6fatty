@@ -6,8 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "charset-normalizer>=3.4.9",
+    "ipykernel>=7.4.0",
+    "ipywidgets>=8.1.9",
     "langchain-openai>=1.7.2",
     "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
     "openai-tts",
     "pandas>=3.0.6",
     "peas-agent-runtime",
